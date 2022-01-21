@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="https://s3.amazonaws.com/shopbop-rx-static-content/sb_2017_favicon.ico" />
+
+<!-- <link rel="stylesheet" href="carosoul1.css"> -->
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+<!-- slider-2 -->
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<style>
+	 .img1 img{
+            height: 600px;
+            width:98%;
+            margin-left: 2%;
+			margin-bottom: 10px;
+        }
+        .img2>img{
+            height: 380px;
+            width:100%;
+            /* margin-left: 5%; */
+         } 
+body {
+	font-family: "Open Sans", sans-serif;
+
+}
+.slider_heading{
+       line-height: 5px;
+	   margin-bottom: 10px;
+}
+.slider_heading p{
+	font-size: 18px;
+	font-weight: 300;
+	margin-left: 100px;
+	font-weight: bolder;
+}
+h2 {
+	color: #000;
+	font-size: 26px;
+	font-weight: 300;
+	text-align: start;
+	text-transform: uppercase;
+	/* position: relative; */
+	margin: 20px 0 20px;
+    margin-left: 100px;
+	font-weight: bolder;
+}
+/* h4{
+    color: #000;
+	font-size: 16px;
+	font-weight: 300;
+	/* text-align: center; */
+	/* text-transform: uppercase;
+	position: relative;
+	margin: 30px 0 80px;
+	margin-left: 100px;
+	margin-top: 100px; */
+/* }  */
+h2 b {
+	color: #ffc000;
+}
+h2::after {
+	content: "";
+	width: 100px;
+	position: absolute;
+	margin: 0 auto;
+	height: 4px;
+	background: rgba(0, 0, 0, 0.2);
+	left: 0;
+	right: 0;
+	bottom: -20px;
+}
+.carousel {
+	margin: 50px auto;
+	padding: 0 70px;
+}
+.carousel .item {
+	min-height: 330px;
+    text-align: center;
+	overflow: hidden;
+}
+.carousel .item .img-box {
+	height: 300px;
+	width: 230px;
+	position: relative;
+}
+.carousel .item img {	
+	/* max-width: 100%; */
+	max-height: 100%;
+	width: 100%;
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+}
+.carousel .item h4 {
+	font-size: 18px;
+	margin: 10px 0;
+}
+.carousel .item .btn {
+	color: #333;
+    border-radius: 0;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: none;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    margin-top: 5px;
+    line-height: 16px;
+}
+.carousel .item .btn:hover, .carousel .item .btn:focus {
+	color: #fff;
+	background: #000;
+	border-color: #000;
+	box-shadow: none;
+}
+.carousel .item .btn i {
+	font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.carousel .thumb-wrapper {
+	text-align: center;
+}
+.carousel .thumb-content {
+	padding: 15px;
+}
+.carousel .carousel-control {
+	height: 100px;
+    width: 40px;
+    background: none;
+    margin: auto 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+.carousel .carousel-control i {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    margin: -16px 0 0 0;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+    font-weight: bold;
+}
+.carousel .item-price {
+	font-size: 13px;
+	padding: 2px 0;
+}
+.carousel .item-price strike {
+	color: #999;
+	margin-right: 5px;
+}
+.carousel .item-price span {
+	color: #86bd57;
+	font-size: 110%;
+}
+.carousel .carousel-control.left i {
+	margin-left: -3px;
+}
+.carousel .carousel-control.left i {
+	margin-right: -3px;
+}
+.carousel .carousel-indicators {
+	bottom: -50px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+	width: 10px;
+	height: 10px;
+	margin: 4px;
+	border-radius: 50%;
+	border-color: transparent;
+}
+.carousel-indicators li {	
+	background: rgba(0, 0, 0, 0.2);
+}
+.carousel-indicators li.active {	
+	background: rgba(0, 0, 0, 0.6);
+}
+.star-rating li {
+	padding: 0;
+}
+/* .star-rating i {
+	font-size: 14px;
+	color: #ffc000;
+} */
+.inspire{
+	height: 500px;
+	width: 100%;
+	/* border: 1px solid black; */
+	background-color: rgb(255, 246, 251);
+}
+.inspire_content p,h3{
+	/* border: 1px solid black;
+	width: 50%; */
+	margin: auto;
+	/* text-align: center; */
+	margin: 10px;
+	font-weight: bolder;
+	color: black;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.inspire_content h3{
+	font-size: 30px;
+}
+.inspire_content p{
+	font-size: 20px;
+}
+.inspire_content1{
+	margin: auto;
+	/* text-align: center; */
+	text-align:left;
+
+	margin: 50px;
+	font-weight: bolder;
+	color: black;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.inspire_content1 h3{
+	font-size: 30px;
+}
+.inspire_content1 p{
+	font-size: 20px;
+}
+.inspire_div{
+	/* border: 1px solid black; */
+	height: 400px;
+	width: 90%;
+	margin: auto;
+}
+.inspire_div{
+        display: flex;
+		
+}
+.inspire_div div{
+	/* border: 1px solid black; */
+	height: 100%;
+	width: 98%;
+	margin: auto;
+	
+}
+.inspire_div img{
+	height: 97%;
+	width: 96%;
+}
+.inspire_div p{
+	text-align: center;
+	text-decoration: red;
+	text-decoration-line: underline;
+	font-size: 18px;
+	font-weight: bolder;
+	color: rgb(219, 66, 66);
+
+}
+.main_pic{
+	margin-top: 40px;
+	/* margin-left: 5px; */
+	width: 1200px;
+}
+.shopbop{
+	height: 500px;
+	width: 98%;
+	/* border: 1px solid black; */
+	margin-top: 60px;
+	display: flex;
+
+}
+.shopbop div{
+	height: 98%;
+	width: 43%;
+	margin: auto;
+	padding: 10px;
+	/* border: 1px solid black; */
+}
+#slider_two{
+	margin-top: 30px;
+}
+/* ?carosol2 */
+.divider {border: 1px solid #ccc;}
+img {width:100%;}
+
+     .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+	/* slider-2 */
+
+	.carousel-cell{
+            margin-top: 00px;
+        }
+        .ig{
+            height: 277px;
+            width: 246px;
+        }
+        .carousel-cell{
+            /* border: 1px solid black; */
+            height: 350px;
+            width: 250px;
+            margin-left: 7px;
+            /* margin-top: 140px; */
+            background-color: rgb(255, 246, 251);
+
+        }
+        .keypad{
+            /* border: 1px solid black; */
+            height:300px;
+            width: 100%;
+            /* margin: auto;  */
+
+    
+            
+        }
+        .currency{
+			margin-top: 10px;
+            line-height: 10px;
+			font-size: 15px;
+            /* margin-left: 30px; */
+            text-align: center;
+			background-color: rgb(255, 246, 251);
+
+            
+        }
+		/* footer */
+
+	
+        .footer{
+             /* border: 1px solid black; */
+             height: 300px;
+             width: 80%;
+             margin: auto;
+             display: flex;
+             line-height: 27px;
+             /* background-color: rgb(248, 241, 245); */
+
+
+        }
+        .footer div{
+            /* border: 1px solid black; */
+            height: 80%;
+            width: 20%;
+            margin: auto;
+
+        }
+       .footer a li{
+            
+            color: rgb(139, 138, 138);
+			font-size: 12px;
+            /* text-decoration:none; */
+            
+            
+        }
+        .footer a{
+            text-decoration-line:none;
+
+        }
+        .footer a li:hover {
+        color: black;
+        }
+        .main_li{
+            font-weight: bolder;
+			font-size: 12px;
+			color: black;
+        }
+        
+        .footer ul {
+         list-style-type: none;
+         
+         }
+		 .footer img{
+			 height: 13px;
+			 width: 13px;
+		 }
+</style>
+</head>
+<body>
+	<div id = "container"></div>
+    <div class = "img1">
+        <!-- <img src="https://m.media-amazon.com/images/G/01/Shopbop/p/pcs/shopbop/media/desktop/lookbooks/2022/2022_01/sb_20220118_desktop_LB_alexis_03_1-0.jpg" alt=""> -->
+		<img src="./images/chase.jpeg" alt="">
+    </div>
+    <div class = "img2">
+        <img src="https://m.media-amazon.com/images/G/01//Shopbop/media/desktop/homepages/2022/2022_01/sb_20220114_desktop_miniM1_gmd._FMwebp_UX1500_.jpg" alt="">
+    </div>
+    <div id = "carosoul1"></div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+            <div class = "slider_heading">
+				<p>SEE THE LATEST</p>
+				<h2>What's New </h2>
+			</div>
+			
+            
+			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+			<!-- Carousel indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>   
+			<!-- Wrapper for carousel items -->
+			<div class="carousel-inner">
+				<div class="item active">
+					<div class="row">
+						<div class="col-sm-3">
+							<div class="thumb-wrapper">
+								<div class="img-box">
+									<img src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/hnsgr/hnsgr300091afb0/hnsgr300091afb0_1642089900588_2-0._QL90_UX207_.jpg" class="img-responsive" alt="">
+								</div>
+								<div class="thumb-content">
+									<h4>Hansen & Gretel</h4>
+									<p class="item-price"><strike>$400.00</strike> <span>$269.00</span></p>
+									<div class="star-rating">
+										<ul class="list-inline">
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+										</ul>
+									</div>
+									<a href="#" class="btn btn-primary">Add to Cart</a>
+								</div>						
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="thumb-wrapper">
+								<div class="img-box">
+									<img src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/stela/stela2182812208/stela2182812208_1641941907582_2-0._QL90_UX207_.jpg" class="img-responsive" alt="">
+								</div>
+								<div class="thumb-content">
+									<h4>Stella McCartney</h4>
+									<p class="item-price"><strike>$25.00</strike> <span>$1150.99</span></p>
+									<div class="star-rating">
+										<ul class="list-inline">
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+										</ul>
+									</div>
+									<a href="#" class="btn btn-primary">Add to Cart</a>
+								</div>						
+							</div>
+						</div>		
+						<div class="col-sm-3">
+							<div class="thumb-wrapper">
+								<div class="img-box">
+									<img src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/zimme/zimme424901c9e1/zimme424901c9e1_1642090552586_2-0._QL90_UX207_.jpg" class="img-responsive" alt="">
+								</div>
+								<div class="thumb-content">
+									<h4>Zimmermann</h4>
+									<p class="item-price"><strike>$899.00</strike> <span>$649.00</span></p>
+									<div class="star-rating">
+										<ul class="list-inline">
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+										</ul>
+									</div>
+									<a href="#" class="btn btn-primary">Add to Cart</a>
+								</div>						
+							</div>
+						</div>								
+						<div class="col-sm-3">
+							<div class="thumb-wrapper">
+								<div class="img-box">
+									<img src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/hatta/hatta3047614a9b/hatta3047614a9b_1642089674262_2-0._QL90_UX207_.jpg" class="img-responsive" alt="">
+								</div>
+								<div class="thumb-content">
+									<h4>Hat Attack</h4>
+									<p class="item-price"><strike>$315.00</strike> <span>$250.00</span></p>
+									<div class="star-rating">
+										<ul class="list-inline">
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+										</ul>
+									</div>
+									<a href="#" class="btn btn-primary">Add to Cart</a>
+								</div>						
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="row">
+						<div class="col-sm-3">
+							<div class="thumb-wrapper">
+								<div class="img-box">
+									<img src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/danij/danij4112519acc/danij4112519acc_1641933531684_2-0._QL90_UX207_.jpg" class="img-responsive" alt="">
+								</div>
+								<div class="thumb-content">
+									<h4>DANNIJO</h4>
+									<p class="item-price"><strike>$289.00</strike> <span>$269.00</span></p>
+									<div class="star-rating">
+										<ul class="list-inline">
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+										</ul>
+									</div>
+									<a href="#" class="btn btn-primary">Add to Cart</a>
+								</div>						
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="thumb-wrapper">
+								<div class="img-box">
+									<img src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/ismdb/ismdb308741c925/ismdb308741c925_1642028812855_2-0._QL90_UX207_.jpg" class="img-responsive" alt="">
+								</div>
+								<div class="thumb-content">
+									<h4>Isabrl Marant</h4>
+									<p class="item-price"><strike>$1099.00</strike> <span>$869.00</span></p>
+									<div class="star-rating">
+										<ul class="list-inline">
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+										</ul>
+									</div>
+									<a href="#" class="btn btn-primary">Add to Cart</a>
+								</div>						
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="thumb-wrapper">
+								<div class="img-box">
+									<img src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/acndb/acndb3179899959/acndb3179899959_1641927646990_2-0._QL90_UX207_.jpg" class="img-responsive" alt="">
+								</div>
+								<div class="thumb-content">
+									<h4>Acne Studios</h4>
+									<p class="item-price"><strike>$109.00</strike> <span>$99.00</span></p>
+									<div class="star-rating">
+										<ul class="list-inline">
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+										</ul>
+									</div>
+									<a href="#" class="btn btn-primary">Add to Cart</a>
+								</div>						
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="thumb-wrapper">
+								<div class="img-box">
+									<img src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/nseed/nseed3027045492/nseed3027045492_1641914395160_2-0._QL90_UX207_.jpg" class="img-responsive" alt="">
+								</div>
+								<div class="thumb-content">
+									<h4>9seed</h4>
+									<p class="item-price"><strike>$599.00</strike> <span>$569.00</span></p>
+									<div class="star-rating">
+										<ul class="list-inline">
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+										</ul>
+									</div>
+									<a href="#" class="btn btn-primary">Add to Cart</a>
+								</div>						
+							</div>
+						</div>						
+					</div>
+				</div>
+				<div class="item">
+					<div class="row">
+						<div class="col-sm-3">
+							<div class="thumb-wrapper">
+								<div class="img-box">
+									<img src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/rails/rails313981c61b/rails313981c61b_1641930660772_2-0._QL90_UX207_.jpg" class="img-responsive" alt="">
+								</div>
+								<div class="thumb-content">
+									<h4>Rails</h4>
+									<p class="item-price"><strike>$369.00</strike> <span>$349.00</span></p>
+									<div class="star-rating">
+										<ul class="list-inline">
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+										</ul>
+									</div>
+									<a href="#" class="btn btn-primary">Add to Cart</a>
+								</div>						
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="thumb-wrapper">
+								<div class="img-box">
+									<img src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/leema/leema301761cc05/leema301761cc05_1642020331883_2-0._QL90_UX207_.jpg" class="img-responsive" alt="">
+								</div>
+								<div class="thumb-content">
+									<h4>Lee Mathews</h4>
+									<p class="item-price"><strike>$315.00</strike> <span>$250.00</span></p>
+									<div class="star-rating">
+										<ul class="list-inline">
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+										</ul>
+									</div>
+									<a href="#" class="btn btn-primary">Add to Cart</a>
+								</div>						
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="thumb-wrapper">
+								<div class="img-box">
+									<img src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/sothe/sothe30039157d2/sothe30039157d2_1642020351261_2-0._QL90_UX207_.jpg" class="img-responsive" alt="">
+								</div>
+								<div class="thumb-content">
+									<h4>Significant Other</h4>
+									<p class="item-price"><strike>$450.00</strike> <span>$418.00</span></p>
+									<div class="star-rating">
+										<ul class="list-inline">
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+										</ul>
+									</div>
+									<a href="#" class="btn btn-primary">Add to Cart</a>
+								</div>						
+							</div>
+						</div>	
+						<div class="col-sm-3">
+							<div class="thumb-wrapper">
+								<div class="img-box">
+									<img src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/maisn/maisn212371c5a9/maisn212371c5a9_1642018101438_2-0._QL90_UX207_.jpg" class="img-responsive" alt="">
+								</div>
+								<div class="thumb-content">
+									<h4>Scotch & Soda</h4>
+									<p class="item-price"><strike>$350.00</strike> <span>$330.00</span></p>
+									<div class="star-rating">
+										<ul class="list-inline">
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+										</ul>
+									</div>
+									<a href="#" class="btn btn-primary">Add to Cart</a>
+								</div>						
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Carousel controls -->
+			<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+				<i class="fa fa-angle-left"></i>
+			</a>
+			<a class="carousel-control right" href="#myCarousel" data-slide="next">
+				<i class="fa fa-angle-right"></i>
+			</a>
+		</div>
+		</div>
+	</div>
+</div>
+<div class = "container">
+	<div class = "inspire_content">
+		<p>GET SOME INSPIRATION</p>
+		<h3>What Are You Looking For?</h3>
+	</div>
+	<div class = "inspire_div">
+		<div >
+			<img src="https://m.media-amazon.com/images/G/01//Shopbop/media/desktop/homepages/2022/2022_01/sb_20220110_hp_card_visnav_dressshop._QL90_UX373_.jpg" alt="">
+			<p>The Dress Shop</p>
+		</div>
+		<div>
+			<img src="https://m.media-amazon.com/images/G/01//Shopbop/media/desktop/homepages/2022/2022_01/sb_20220110_hp_card_visnav_everydayessentials._QL90_UX373_.jpg" alt="">
+			<p>Everyday Essentials</p>
+		</div>
+		<div>
+			<img src="https://m.media-amazon.com/images/G/01//Shopbop/media/desktop/homepages/2022/2022_01/sb_20220110_hp_card_visnav_nightout._QL90_UX373_.jpg" alt="">
+			<p>Night-Out Edit</p>
+		</div>
+		<div>
+			<img src="https://m.media-amazon.com/images/G/01//Shopbop/media/desktop/homepages/2022/2022_01/sb_20220110_hp_card_visnav_bestdressed._QL90_UX373_.jpg" alt="">
+			<p>Best-Dressed Guest</p>
+		</div>
+		<div>
+			<img src="https://m.media-amazon.com/images/G/01//Shopbop/media/desktop/homepages/2022/2022_01/sb_20220110_hp_card_visnav_skishop._QL90_UX373_.jpg" alt="">
+			<p>Ski Shop</p>
+		</div>
+	</div>
+	<div class = "main_pic">
+		<img src="./images/main_pic.png" alt="">
+	</div>
+</div>
+<div class ="shopbop">
+	<div>
+		<img height = 100%; width=100%; src="https://m.media-amazon.com/images/G/01//Shopbop/media/desktop/homepages/2022/2022_01/sb_20220110_hp_card_2up_shopbopmen._QL90_UX595_.jpg" alt="">
+	</div>
+	<div>
+		<img height = 100%; width=100%; src="https://m.media-amazon.com/images/G/01//Shopbop/media/desktop/homepages/2022/2022_01/sb_20220110_hp_card_2up_activewear._QL90_UX595_.jpg" alt="">
+	</div>
+</div>
+
+<!-- slider-2 -->
+
+<div id="keypad">
+	<div class = "inspire_content1">
+		<p>ON OUR RADAR</p>
+		<h3>Editors' Picks</h3>
+	</div>
+	<div class="carousel" data-flickity='{"wrapAround":true, "autoPlay":true}'>
+		
+		<div class="carousel-cell">
+		  
+			<img class="ig" src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/orubi/orubi3016925037/orubi3016925037_1637611721115_2-0._QL90_UX207_.jpg" alt="">
+			 
+			<!-- <h1>Upto 40% OFF</h1> -->
+			<div class = "currency">
+				<p>Olivia Rubin</p>
+				<p>Paisley Dress</p>
+				<p>$365</p>
+			</div>
+			
+		
+		</div>
+		<div class="carousel-cell">
+			<img class="ig" src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/bwood/bwood3003011236/bwood3003011236_1637165483901_2-0._QL90_UX207_.jpg" alt="">
+	   
+			<div class = "currency">
+				<p>Brandon Blackwood</p>
+				<p>The Syl Bag</p>
+				<p>$150</p>
+			</div>
+		</div>
+		<div class="carousel-cell">
+			<img class="ig" src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/orubi/orubi301721c9fe/orubi301721c9fe_1637515329686_2-0._QL90_UX207_.jpg" alt="">
+	   
+			<div class = "currency">
+				<p>Olivia Rubin</p>
+				<p>Madeline Cardigan</p>
+				<p>$284</p>
+			</div>
+		</div>
+		
+		<div class="carousel-cell">
+			<img class="ig"  src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/citiz/citiz41329120d6/citiz41329120d6_q1_2-1._QL90_UX207_.jpg" alt="">
+		
+			<div class = "currency">
+				<p>Citizens of Humanity</p>
+				<p>Charlott High Rise straight</p>
+				<p>$268</p>
+			</div>
+		</div>
+
+		<div class="carousel-cell">
+		 <img class="ig" src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/omorr/omorr300161b420/omorr300161b420_1635875904018_2-0._QL90_UX207_.jpg" alt="">
+		
+		 <div class = "currency">
+			<p>Olivia Morris At Home</p>
+			<p>Daphne Bow Slippers</p>
+			<p>$335</p>
+		</div>
+		</div>
+
+		<div class="carousel-cell">
+			<img class="ig" src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/cmira/cmira303711cb23/cmira303711cb23_1640205427055_2-0._QL90_UX207_.jpg" alt="">
+		   
+			<div class = "currency">
+				<p>Mira Mikati</p>
+				<p>Long Sleeved Drawstring</p>
+				<p>$485</p>
+			</div>
+			
+		   </div>
+
+		   <div class="carousel-cell">
+			<img class="ig" src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/farmr/farmr3043111629/farmr3043111629_1639669615247_2-0._QL90_UX207_.jpg" alt="">
+		   
+			<div class = "currency">
+				<p>Farm Rio</p>
+				<p>Crowchet Embroidered</p>
+				<p>$295</p>
+			</div>
+		   </div>
+
+		   <div class="carousel-cell">
+			<img class="ig" src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/redon/redon305221b7b5/redon305221b7b5_1633554461570_2-0._QL90_UX207_.jpg" alt="">
+		   
+			<div class = "currency">
+				<p>Re/ Done</p>
+				<p>90's Comfy Jeans</p>
+				<p>$295</p>
+			</div>
+		   </div>
+
+		   <div class="carousel-cell">
+			<img class="ig" src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/pacoo/pacoo303491cb4b/pacoo303491cb4b_1641577718656_2-0._QL90_UX207_.jpg" alt="">
+		   
+			<div class = "currency">
+				<p>Paco RebbanePaco Rebbane</p>
+				<p>Paco Rebbane</p>
+				<p>$290</p>
+			</div>
+		   </div>
+
+		
+
+	  </div>
+
+</div>
+
+
+<!-- paige -->
+<div>
+	<img src="./images/paige.jpeg" alt="">
+</div>
+
+
+
+<!-- slider-3 -->
+
+<div id="keypad">
+	<div class = "inspire_content1">
+		<p>DON’T MISS OUR</p>
+			
+		<h3>Recent Best Sellers</h3>
+	</div>
+	<div class="carousel" data-flickity='{"wrapAround":true, "autoPlay":true}'>
+		
+		<div class="carousel-cell">
+		  
+			<img class="ig" src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/nwbal/nwbal302501a1a7/nwbal302501a1a7_q1_2-0._QL90_UX207_.jpg" alt="">
+			 
+			<!-- <h1>Upto 40% OFF</h1> -->
+			<div class = "currency">
+				<p>New Balance</p>
+				<p>Made in U.S.A. 990v5</p>
+				<p>$175</p>
+			</div>
+			
+		
+		</div>
+		<div class="carousel-cell">
+			<img class="ig" src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/onrun/onrun3002792281/onrun3002792281_q1_2-0._QL90_UX207_.jpg" alt="">
+	   
+			<div class = "currency">
+				<p>On</p>
+				<p>Cloud Sneakers</p>
+				<p>$130</p>
+			</div>
+		</div>
+		<div class="carousel-cell">
+			<img class="ig" src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/leviv/leviv205041569e/leviv205041569e_q1_2-0._QL90_UX207_.jpg" alt="">
+	   
+			<div class = "currency">
+				<p>Levi's</p>
+				<p>501 Skinny Jeans</p>
+				<p>$98</p>
+			</div>
+		</div>
+		
+		<div class="carousel-cell">
+			<img class="ig"  src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/onrun/onrun3001911656/onrun3001911656_q1_2-0._QL90_UX207_.jpg" alt="">
+		
+			<div class = "currency">
+				<p>On</p>
+				<p>Cloud Sneakers</p>
+				<p>$140</p>
+			</div>
+		</div>
+
+		<div class="carousel-cell">
+		 <img class="ig" src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/cnvsm/cnvsm305321071b/cnvsm305321071b_q1_2-0._QL90_UX207_.jpg" alt="">
+		
+		 <div class = "currency">
+			<p>Converse</p>
+			<p>All Star's High Top Sneakers</p>
+			<p>$85</p>
+		</div>
+		</div>
+
+		<div class="carousel-cell">
+			<img class="ig" src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/rroll/rroll3049415dac/rroll3049415dac_1641416632354_2-0._QL90_UX207_.jpg" alt="">
+		   
+			<div class = "currency">
+				<p>Roller Rabbit</p>
+				<p>Cluny Naema Dress</p>
+				<p>$188</p>
+			</div>
+			
+		   </div>
+
+		   <div class="carousel-cell">
+			<img class="ig" src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/agole/agole3055640732/agole3055640732_1629747983514_2-0._QL90_UX207_.jpg" alt="">
+		   
+			<div class = "currency">
+				<p>AGOLDE</p>
+				<p>90's Pinch Waist High Rise</p>
+				<p>$198</p>
+			</div>
+		   </div>
+
+		   <div class="carousel-cell">
+			<img class="ig" src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/treto/treto204521949b/treto204521949b_1640298583406_2-0._QL90_UX207_.jpg" alt="">
+		   
+			<div class = "currency">
+				<p>Tretorn</p>
+				<p>Rawlins 2.0 Sneakers</p>
+				<p>$85</p>
+			</div>
+		   </div>
+
+		   <div class="carousel-cell">
+			<img class="ig" src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/lione/lione300181071b/lione300181071b_q1_2-0._QL90_UX207_.jpg" alt="">
+		   
+			<div class = "currency">
+				<p>Lioness</p>
+				<p>Palermo Blazer</p>
+				<p>$88</p>
+			</div>
+		   </div>
+	  </div>
+
+</div>
+<!-- footer -->
+
+<div class = "footer">
+	<div>
+		<ul>
+			<li class = "main_li">Services</li>
+			<a href=""><li>Customer Services</li></a>
+			<a href=""><li>Gift Certificate</li></a>
+			<a href=""><li>Give Us Your Feedback</li></a>
+	
+		</ul>
+	</div>
+	<div>
+		<ul>
+			<li class = "main_li">Information</li>
+			<a href=""><li>About Us</li></a>
+			<a href=""><li>Careers</li></a>
+			<a href=""><li>Affiliate Program</li></a>
+		</ul>
+	</div>
+	<div>
+		<ul>
+			<li class = "main_li">Personalize</li>
+			<a href=""><li>Account</li></a>
+			<a href=""><li>My Loyality</li></a>
+			<a href=""><li>My Wishlist</li></a>
+			<a href=""><li>My <img height = "13px" width = "13px" src="https://i.pinimg.com/236x/30/c4/ed/30c4edcb06cedaffa6b57be5281821a4--clip-art-coral.jpg" alt="">S</li></a>
+			<a href=""><li>My Designer</li></a>
+			<a href=""><li>My Reviews</li></a>
+		
+		 </ul>
+	</div>
+	<div>
+		<ul>
+			<li class = "main_li">Connect</li>
+			<a href=""><li>Mobile</li></a>
+			<a href=""><li>Instagram</li></a>
+			<a href=""><li>Facebook</li></a>
+			<a href=""><li>Pinterest</li></a>
+			<a href=""><li>Weibo</li></a>
+			<a href=""><li>Signup for Shopbop Emails</li></a>
+		 </ul>
+		
+	</div>
+	<div>
+		<ul>
+			<li class = "main_li">Location</li>
+			<a href=""><li>India(change)</li></a>
+			<a href=""><li>FREE express International</li></a>
+			<a href=""><li>Delivery</li></a>
+			<a href=""><li>+ Easy Returns</li></a>
+		 </ul>
+
+
+
+</body>
+</html>             
+<script type = "module">
+	import navbar from "./navbar.js"
+	console.log(navbar);
+
+	// import carosoul_2 from "./carosoul2.js"
+	// let slider_two = document.getElementById("slider_two");
+	// slider_two.innerHTML = carosoul_2();
+
+	
+	let container = document.getElementById("container")
+	container.innerHTML = navbar()
+
+	var swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+	</script>                   		
